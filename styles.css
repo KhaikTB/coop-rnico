@@ -1,0 +1,471 @@
+@font-face
+{
+    font-family: 'acumin-pro-medium';
+    src: url('./fontsfree-net-acumin-pro-medium-1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'acumin-pro-italic';
+    src: url('./fontsfree-net-acumin-pro-book-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* *
+{
+    font-style: MADE Tommy Soft;
+    font-style: Acunim Pro Italic;
+    font-style: Acunim Pro Medium;
+    font-style: Acunim Pro Bold;
+} */
+
+body
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root
+{
+    --crl-yellow: #FFE363;
+    --crl-green: #2D6251;
+    --crl-lightgreen: #C5DAA2;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: calc(20px + 0.5vw);
+    height: calc(40px + 1vw);
+}
+
+.nav-link
+{
+    padding-bottom: 8px;
+    background:
+    radial-gradient(circle closest-side, currentColor 80%, transparent) -12px 100% /12px 12px no-repeat,
+    linear-gradient(currentColor 0 0) bottom left /var(--d, 0) 12px no-repeat;
+    transition: 0.3s linear;
+
+    text-decoration: none;
+    color: var(--crl-green);
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(20px + 0.5vw);
+    margin: 0 calc(10px + 0.25vw);
+}
+
+.nav-link:hover
+{
+    --d: 50%;
+    background-position: 50% 100%, bottom left;
+
+    color: var(--crl-lightgreen);
+}
+
+#header-logo
+{
+    height: 100%;
+}
+
+/* Background Image */
+#background_image > img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    height: 700px;
+}
+
+/* #home
+{
+    position: relative;
+} */
+
+#overlay
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(20px + 1vw);
+    padding: calc(10px + 8vw);
+    color: white;
+}
+
+h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.h1-crl1
+{
+    margin-left: 10px;
+    color: var(--crl-green);
+    background-color: transparent;
+}
+
+h2, .p-pad1, #btnmargin
+{
+    padding-left: calc(10px + 3.5vw);
+    color: black;
+}
+
+h2
+{
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(12px + 1vw);
+    color: var(--crl-green);
+}
+
+/* Text and Image Sections */
+.container
+{
+    /* border: 3px solid black; */
+    width: 100%;
+    margin-top: 6%;
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(10px + 0.8vw);
+    line-height: 1.5;
+    display: flex;
+}
+
+#btn1
+{
+    padding: calc(10px + 0.3vw);
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(10px + 0.2vw);
+    margin-right: calc(10px + 0.5vw);
+    background-color: hsl(121, 82%, 47%);
+    border: solid 3px hsl(121, 82%, 47%);
+    border-radius: 20%;
+}
+
+#btn2
+{
+    padding: calc(10px + 0.3vw);
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(10px + 0.2vw);
+    border: solid 3px hsl(121, 82%, 47%);
+    border-radius: 20%;
+}
+
+#btn1:hover, #btn2:hover
+{
+    scale: 0.9;
+}
+
+
+.panel > img
+{
+    width: calc(100px + 35vw);
+    margin-left: calc(20px + 3vw);
+    padding-right: calc(10px + 3.5vw);
+}
+
+#DL
+{
+    text-decoration: none;
+}
+
+.text-info
+{
+    text-align: center;
+    margin: 0 calc(20px + 3vw);
+}
+
+#small-info
+{
+    font-size: calc(5px + 0.6vw);
+}
+
+#side > img
+{
+    width: calc(100px + 30vw);
+    margin-left: calc(20px + 10vw);
+    padding-right: calc(10px + 2vw);
+    margin-top: 25%;
+}
+
+#side:hover
+{
+    animation-name: TopMov;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes TopMov
+{
+    from
+    {
+        transform: translateY(0px);
+    }
+    to
+    {
+        transform: translateY(-30px);
+    }
+}
+
+/* ................................................................................................ */
+
+.modal
+{
+    position: fixed;
+    /* position: relative; needs for to go below */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+    background-color: white;
+    width: calc(300px + 60vw);
+    max-width: 90%;
+    height: calc(150px + 20vw);
+    z-index: 10;
+}
+  
+.modal.active
+{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header
+{
+    padding: calc(10px + 0.2vw);
+    margin-top: calc(-25px - 0.5vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.modal-header > .title
+{
+    font-size: calc(12px + 0.8vw);
+    font-weight: bold;
+    margin-left: 35%;
+}
+
+.modal-header > .close-button
+{
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: calc(10px + 1vw);
+    font-weight: bold;
+}
+
+.modal-body
+{
+    padding: calc(10px + 0.2vw);
+}
+
+.form-group
+{
+    text-align: center;
+}
+
+label
+{
+    display: block;
+    margin: calc(5px + 0.5vw);
+    font-size: calc(15px + 0.5vw);
+}
+
+select
+{
+    font-size: calc(10px + 0.5vw);
+    border: 1px solid black;
+    outline: none;
+    width: calc(150px + 60vw);
+    max-width: 90%;
+    padding: calc(8px + 0.2vw);
+}
+
+#overlay2
+{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    pointer-events: none;
+}
+
+#overlay2.active
+{
+    opacity: 0.5;
+    pointer-events: all;
+}
+
+/* ................................................................................................ */
+
+/* Video */
+#background-video > video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    z-index: 1;
+    padding-bottom: 20px;
+}
+
+#video
+{
+    position: relative;
+    margin-top: 4%;
+}
+
+#overlay3
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(20px + 2vw);
+    padding: calc(10px + 8vw);
+    color: var(--crl-lightgreen);
+}
+
+#overlay3 > p
+{
+    color: white;
+}
+
+#p-crl1
+{
+    color: var(--crl-lightgreen);
+    background-color: transparent;
+}
+
+/* Info Boxes */
+#info-wrapper
+{
+    margin-top: 8%;
+    background-color: var(--crl-lightgreen);
+    font-family: "acumin-pro-medium", Arial;
+    padding-top: 5px;
+}
+
+.h2-title
+{
+    text-align: center;
+    color: var(--crl-green);
+}
+
+#box
+{
+    display: grid;
+    grid-tempLate-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+    padding: 50px;
+}
+
+.info-wrapper
+{
+    width: 280px;
+    height: 260px;
+    text-align: center;
+    background-color: var(--crl-lightgreen);
+    padding: calc(5px + 0.8vw);
+}
+
+.info-wrapper > h3
+{
+    color: var(--crl-green);
+}
+
+.fa-check, .fa-paperclip, .fa-shield-halved, .fa-file-pen
+{
+    background: transparent;
+    color: orangered;
+    cursor: pointer;
+    font-size: calc(5px + 1.5vw);
+}
+
+.fa-check:hover, .fa-paperclip:hover, .fa-shield-halved:hover, .fa-file-pen:hover
+{
+    animation-name: TopMov2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes TopMov2
+{
+    from
+    {
+        transform: translateY(0px);
+    }
+    to
+    {
+        transform: translateY(-10px);
+    }
+}
+
+#footer
+{
+    margin-top: 3%;
+    background-color: hsla(0, 0%, 78%, 0.629);
+    font-family: "acumin-pro-medium", Arial;
+}
+
+#header-logo2
+{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: calc(50px + 3vw);
+    padding-top: calc(20px + 1vw);
+    margin-left: 40%;
+}
+
+#footer-links, #footer-links > a
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: calc(20px + 0.5vw);
+    color: var(--crl-green);
+    text-decoration: none;
+    font-size: calc(10px + 0.8vw);
+}
+
+.footer-link1, .footer-link2, .footer-link3, .footer-link4
+{
+    background: linear-gradient(var(--crl-yellow) 0 0) 0 100% /var(--d, 0) 3px no-repeat;
+    transition: 1s;
+}
+
+.footer-link1:hover, .footer-link2:hover, .footer-link3:hover, .footer-link4:hover
+{
+    --d: 100%;
+}
+
+#copyright
+{
+    font-size: calc(10px + 0.3vw);
+    margin: 0;
+    padding: 5px;
+}
