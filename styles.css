@@ -14,14 +14,6 @@
     font-style: italic;
 }
 
-/* *
-{
-    font-style: MADE Tommy Soft;
-    font-style: Acunim Pro Italic;
-    font-style: Acunim Pro Medium;
-    font-style: Acunim Pro Bold;
-} */
-
 body
 {
     box-sizing: border-box;
@@ -30,9 +22,9 @@ body
 
 :root
 {
-    --crl-yellow: #FFE363;
     --crl-green: #2D6251;
     --crl-lightgreen: #C5DAA2;
+    --crl-yellow: #FFE363;
 }
 
 header
@@ -40,9 +32,14 @@ header
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: calc(20px + 0.5vw);
-    height: calc(40px + 1vw);
+    margin: calc(10px + 1vw);
+    height: calc(40px + 2vw);
 }
+
+/* #header-logo
+{
+    height: 100%;
+} */
 
 .nav-link
 {
@@ -67,10 +64,38 @@ header
     color: var(--crl-lightgreen);
 }
 
-#header-logo
+/* #home
 {
-    height: 100%;
+    position: relative;
+} */
+/* .................................................................... */
+#overlay1
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(20px + 1vw);
+    padding: calc(10px + 8vw);
+    /* color: white; */
 }
+
+h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.h1-crl1
+{
+    color: var(--crl-lightgreen);
+    margin-left: 10px;
+    /* background-color: transparent; */
+}
+/* .................................................................... */
+
 
 /* Background Image */
 #background_image > img
@@ -85,35 +110,12 @@ header
     height: 700px;
 }
 
-/* #home
-{
-    position: relative;
-} */
 
-#overlay
+
+
+#sub-title
 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: "acumin-pro-medium", Arial;
-    font-size: calc(20px + 1vw);
-    padding: calc(10px + 8vw);
     color: white;
-}
-
-h1
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.h1-crl1
-{
-    margin-left: 10px;
-    color: var(--crl-green);
-    background-color: transparent;
 }
 
 h2, .p-pad1, #btnmargin
@@ -174,9 +176,10 @@ h2
     padding-right: calc(10px + 3.5vw);
 }
 
-#DL
+.DL
 {
     text-decoration: none;
+    color: var(--crl-green);
 }
 
 .text-info
@@ -195,7 +198,7 @@ h2
     width: calc(100px + 30vw);
     margin-left: calc(20px + 10vw);
     padding-right: calc(10px + 2vw);
-    margin-top: 25%;
+    margin-top: 10%;
 }
 
 #side:hover
@@ -218,6 +221,43 @@ h2
         transform: translateY(-30px);
     }
 }
+
+
+/* Saber mais Section */
+.read-more-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.container2
+{
+    padding-left: calc(10px + 3.5vw);
+    padding-bottom: calc(10px + 0.5vw);
+    line-height: 1.5;
+}
+
+.read-more-text
+{
+    display: none;
+}
+
+.read-more-text--show
+{
+    display: inline;
+}
+
+.read-more-btn
+{
+    color: var(--crl-green);
+}
+/* ... */
+
+/* Pedir Contacto Btn Section */
+
+/* ... */
+
+
 
 /* ................................................................................................ */
 
