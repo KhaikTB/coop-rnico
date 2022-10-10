@@ -16,7 +16,7 @@
 
 body
 {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin: 0;
 }
 
@@ -64,11 +64,12 @@ header
     color: var(--crl-lightgreen);
 }
 
+/* Starting Section */
 /* #home
 {
     position: relative;
 } */
-/* .................................................................... */
+
 #overlay1
 {
     display: flex;
@@ -76,8 +77,34 @@ header
     flex-direction: column;
     font-family: "acumin-pro-medium", Arial;
     font-size: calc(20px + 1vw);
-    padding: calc(10px + 8vw);
     /* color: white; */
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #overlay1
+    {
+        margin-bottom: 320px;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    #overlay1
+    {
+        margin-bottom: 300px;
+    }
+}
+
+/* Screen */
+@media all and (min-width: 850px)
+{
+    #overlay1
+    {
+        margin-bottom: 400px;
+    }
 }
 
 h1
@@ -88,14 +115,59 @@ h1
     color: white;
 }
 
-.h1-crl1
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    h1
+    {
+        margin-left: 25%;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    h1
+    {
+        margin-top: 25%;
+        margin-left: 10%;
+    }
+}
+
+#h1-crl1
 {
     color: var(--crl-lightgreen);
     margin-left: 10px;
-    /* background-color: transparent; */
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #h1-crl1
+    {
+        visibility: hidden;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    #h1-crl1
+    {
+        visibility: hidden;
+    }
 }
 /* .................................................................... */
+h2, .p-pad1, #btnmargin
+{
+    padding-left: calc(10px + 3.5vw);
+    color: black;
+}
 
+#sub-title
+{
+    color: white;
+}
 
 /* Background Image */
 #background_image > img
@@ -108,39 +180,37 @@ h1
     object-fit: cover;
     z-index: -1;
     height: 700px;
-}
-
-
-
-
-#sub-title
-{
-    color: white;
-}
-
-h2, .p-pad1, #btnmargin
-{
-    padding-left: calc(10px + 3.5vw);
-    color: black;
-}
-
-h2
-{
-    font-family: "acumin-pro-medium", Arial;
-    font-size: calc(12px + 1vw);
-    color: var(--crl-green);
+    /* Do maybe after fixing next text sections */
+    /* height: calc(500px + 12vw); */
 }
 
 /* Text and Image Sections */
 .container
 {
-    /* border: 3px solid black; */
     width: 100%;
     margin-top: 6%;
     font-family: "acumin-pro-medium", Arial;
     font-size: calc(10px + 0.8vw);
     line-height: 1.5;
     display: flex;
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    .container
+    {
+        display: inline-block;
+    }
+}
+/* Use display none for moving the image */
+/* .................................................................... */
+
+h2
+{
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(12px + 1vw);
+    color: var(--crl-green);
 }
 
 #btn1
@@ -174,6 +244,15 @@ h2
     width: calc(100px + 35vw);
     margin-left: calc(20px + 3vw);
     padding-right: calc(10px + 3.5vw);
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #side
+    {
+        display: none;
+    }
 }
 
 .DL
@@ -256,7 +335,6 @@ h2
 /* Pedir Contacto Btn Section */
 
 /* ... */
-
 
 
 /* ................................................................................................ */
