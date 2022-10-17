@@ -157,7 +157,7 @@ h1
         visibility: hidden;
     }
 }
-/* .................................................................... */
+
 h2, .p-pad1, #btnmargin
 {
     padding-left: calc(10px + 3.5vw);
@@ -180,8 +180,6 @@ h2, .p-pad1, #btnmargin
     object-fit: cover;
     z-index: -1;
     height: 700px;
-    /* Do maybe after fixing next text sections */
-    /* height: calc(500px + 12vw); */
 }
 
 /* Text and Image Sections */
@@ -200,16 +198,73 @@ h2, .p-pad1, #btnmargin
 {
     .container
     {
-        display: inline-block;
+        display: block;
     }
 }
-/* Use display none for moving the image */
 /* .................................................................... */
+.panel > img
+{
+    width: calc(100px + 35vw);
+    margin-left: calc(20px + 3vw);
+    padding-right: calc(10px + 3.5vw);
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    .panel > img
+    {
+        display: none;
+    }
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #panel-phone1 > img, #panel-phone2 > img, #panel-phone3 > img
+    {
+        width: calc(100px + 35vw);
+        margin: 0 20%;
+        /* Fix this margin 20% when the bugged section is fixed */
+        margin-top: 3%;
+    }
+}
+
+/* Ipad and Screen */
+@media all and (min-width: 400px)
+{
+    #panel-phone1, #panel-phone2, #panel-phone3
+    {
+        display: none;
+    }
+}
 
 h2
 {
     font-family: "acumin-pro-medium", Arial;
     font-size: calc(12px + 1vw);
+    color: var(--crl-green);
+}
+
+.DL
+{
+    text-decoration: none;
+    color: var(--crl-green);
+}
+
+/* .text-info
+{
+    text-align: center;
+    margin: 0 calc(20px + 3vw);
+} */
+
+
+
+/* .................................................................... */
+
+.h2-title
+{
+    text-align: center;
     color: var(--crl-green);
 }
 
@@ -238,14 +293,6 @@ h2
     scale: 0.9;
 }
 
-
-.panel > img
-{
-    width: calc(100px + 35vw);
-    margin-left: calc(20px + 3vw);
-    padding-right: calc(10px + 3.5vw);
-}
-
 /* Phone */
 @media all and (max-width: 400px) and (min-width: 350px)
 {
@@ -253,18 +300,6 @@ h2
     {
         display: none;
     }
-}
-
-.DL
-{
-    text-decoration: none;
-    color: var(--crl-green);
-}
-
-.text-info
-{
-    text-align: center;
-    margin: 0 calc(20px + 3vw);
 }
 
 #small-info
@@ -485,11 +520,6 @@ select
     padding-top: 5px;
 }
 
-.h2-title
-{
-    text-align: center;
-    color: var(--crl-green);
-}
 
 #box
 {
