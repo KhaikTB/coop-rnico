@@ -186,7 +186,7 @@ h2, .p-pad1, #btnmargin
 .container
 {
     width: 100%;
-    margin-top: 6%;
+    margin-top: 12%;
     font-family: "acumin-pro-medium", Arial;
     font-size: calc(10px + 0.8vw);
     line-height: 1.5;
@@ -201,10 +201,11 @@ h2, .p-pad1, #btnmargin
         display: block;
     }
 }
-/* .................................................................... */
+
 .panel > img
 {
     width: calc(100px + 35vw);
+    height: calc(100px + 20vw);
     margin-left: calc(20px + 3vw);
     padding-right: calc(10px + 3.5vw);
 }
@@ -257,98 +258,59 @@ h2
     text-align: center;
     margin: 0 calc(20px + 3vw);
 } */
-
-
-
 /* .................................................................... */
-
-.h2-title
+#wind_turbine_mb
 {
-    text-align: center;
-    color: var(--crl-green);
-}
-
-#btn1
-{
-    padding: calc(10px + 0.3vw);
-    font-family: "acumin-pro-medium", Arial;
-    font-size: calc(10px + 0.2vw);
-    margin-right: calc(10px + 0.5vw);
-    background-color: hsl(121, 82%, 47%);
-    border: solid 3px hsl(121, 82%, 47%);
-    border-radius: 20%;
-}
-
-#btn2
-{
-    padding: calc(10px + 0.3vw);
-    font-family: "acumin-pro-medium", Arial;
-    font-size: calc(10px + 0.2vw);
-    border: solid 3px hsl(121, 82%, 47%);
-    border-radius: 20%;
-}
-
-#btn1:hover, #btn2:hover
-{
-    scale: 0.9;
+    margin-top: 3%;
+    margin-bottom: calc(10px + 0.5vw);
+    /* When next section margin-top done eliminate */
 }
 
 /* Phone */
 @media all and (max-width: 400px) and (min-width: 350px)
 {
-    #side
+    #wind_turbine_mb
     {
-        display: none;
+        margin-top: 12%;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    #wind_turbine_mb
+    {
+        margin-top: 6%;
     }
 }
 
 #small-info
 {
-    font-size: calc(5px + 0.6vw);
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(10px + 0.6vw);
 }
 
-#side > img
+/* Screen */
+@media all and (min-width: 850px)
 {
-    width: calc(100px + 30vw);
-    margin-left: calc(20px + 10vw);
-    padding-right: calc(10px + 2vw);
-    margin-top: 10%;
-}
-
-#side:hover
-{
-    animation-name: TopMov;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes TopMov
-{
-    from
+    #small-info
     {
-        transform: translateY(0px);
-    }
-    to
-    {
-        transform: translateY(-30px);
+        font-family: "acumin-pro-medium", Arial;
+        font-size: calc(5px + 0.6vw);
     }
 }
-
 
 /* Saber mais Section */
-.read-more-container
+/* .read-more-container
 {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .container2
 {
     padding-left: calc(10px + 3.5vw);
-    padding-bottom: calc(10px + 0.5vw);
-    line-height: 1.5;
+    padding-bottom: 3%;
 }
 
 .read-more-text
@@ -365,14 +327,35 @@ h2
 {
     color: var(--crl-green);
 }
-/* ... */
 
 /* Pedir Contacto Btn Section */
+/* Needs confirmation */
+#btn1
+{
+    padding: calc(10px + 0.3vw);
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(10px + 0.2vw);
+    margin-right: calc(10px + 0.5vw);
+    background-color: hsl(121, 82%, 47%);
+    border: solid 3px hsl(121, 82%, 47%);
+    border-radius: 20%;
+}
 
-/* ... */
+/* Simular Poupança Btn Section */
+/* Needs confirmation */
+#btn2
+{
+    padding: calc(10px + 0.3vw);
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(10px + 0.2vw);
+    border: solid 3px hsl(121, 82%, 47%);
+    border-radius: 20%;
+}
 
-
-/* ................................................................................................ */
+#btn1:hover, #btn2:hover
+{
+    scale: 0.9;
+}
 
 .modal
 {
@@ -389,7 +372,7 @@ h2
     height: calc(150px + 20vw);
     z-index: 10;
 }
-  
+
 .modal.active
 {
     transform: translate(-50%, -50%) scale(1);
@@ -447,7 +430,10 @@ select
     padding: calc(8px + 0.2vw);
 }
 
-#overlay2
+/* #dropdown1 Not used yet */
+/* #dropdown2 Not used yet */
+
+#overlay3
 {
     position: fixed;
     opacity: 0;
@@ -460,13 +446,64 @@ select
     pointer-events: none;
 }
 
-#overlay2.active
+#overlay3.active
 {
     opacity: 0.5;
     pointer-events: all;
 }
 
-/* ................................................................................................ */
+#side > img
+{
+    width: calc(100px + 30vw);
+    margin-left: calc(20px + 10vw);
+    padding-right: calc(10px + 2vw);
+    margin-top: 10%;
+}
+
+#side:hover
+{
+    animation-name: TopMov;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes TopMov
+{
+    from
+    {
+        transform: translateY(0px);
+    }
+    to
+    {
+        transform: translateY(-30px);
+    }
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #side
+    {
+        display: none;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    #side
+    {
+        display: none;
+    }
+}
+/* .................................................................... */
+.h2-title
+{
+    text-align: center;
+    color: var(--crl-green);
+}
 
 /* Video */
 #background-video > video
@@ -487,7 +524,7 @@ select
     margin-top: 4%;
 }
 
-#overlay3
+#overlay4
 {
     position: relative;
     display: flex;
@@ -500,7 +537,7 @@ select
     color: var(--crl-lightgreen);
 }
 
-#overlay3 > p
+#overlay4 > p
 {
     color: white;
 }
@@ -519,7 +556,6 @@ select
     font-family: "acumin-pro-medium", Arial;
     padding-top: 5px;
 }
-
 
 #box
 {

@@ -67,7 +67,7 @@ readMoreContent.addEventListener('click', event =>
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay2')
+const overlay = document.getElementById('overlay3')
 
 openModalButtons.forEach(button => {
   button.addEventListener('click', () => {
