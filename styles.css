@@ -258,7 +258,7 @@ h2
     text-align: center;
     margin: 0 calc(20px + 3vw);
 } */
-/* .................................................................... */
+
 #wind_turbine_mb
 {
     margin-top: 3%;
@@ -503,6 +503,8 @@ select
 {
     text-align: center;
     color: var(--crl-green);
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(18px + 1vw);
 }
 
 /* Video */
@@ -521,7 +523,25 @@ select
 #video
 {
     position: relative;
-    margin-top: 4%;
+    margin-top: 3%;
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #video
+    {
+        margin-top: 8%;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    #video
+    {
+        margin-top: 6%;
+    }
 }
 
 #overlay4
@@ -551,10 +571,28 @@ select
 /* Info Boxes */
 #info-wrapper
 {
-    margin-top: 8%;
+    margin-top: 10%;
     background-color: var(--crl-lightgreen);
     font-family: "acumin-pro-medium", Arial;
     padding-top: 5px;
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #info-wrapper
+    {
+        margin-top: 16%;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    #info-wrapper
+    {
+        margin-top: 12%;
+    }
 }
 
 #box
@@ -565,10 +603,29 @@ select
     padding: 50px;
 }
 
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #box
+    {
+        display: grid;
+        grid-tempLate-columns: repeat(1, 1fr);
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    #box
+    {
+        display: grid;
+        grid-tempLate-columns: repeat(2, 1fr);
+    }
+}
+
 .info-wrapper
 {
     width: 280px;
-    height: 260px;
     text-align: center;
     background-color: var(--crl-lightgreen);
     padding: calc(5px + 0.8vw);
@@ -584,7 +641,7 @@ select
     background: transparent;
     color: orangered;
     cursor: pointer;
-    font-size: calc(5px + 1.5vw);
+    font-size: calc(20px + 0.8vw);
 }
 
 .fa-check:hover, .fa-paperclip:hover, .fa-shield-halved:hover, .fa-file-pen:hover
@@ -610,9 +667,27 @@ select
 
 #footer
 {
-    margin-top: 3%;
+    margin-top: 4%;
     background-color: hsla(0, 0%, 78%, 0.629);
     font-family: "acumin-pro-medium", Arial;
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #footer
+    {
+        margin-top: 8%;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    #footer
+    {
+        margin-top: 6%;
+    }
 }
 
 #header-logo2
@@ -625,15 +700,53 @@ select
     margin-left: 40%;
 }
 
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #header-logo2
+    {
+        margin-left: 25%;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    #header-logo2
+    {
+        margin-left: 35%;
+    }
+}
+
 #footer-links, #footer-links > a
 {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: calc(20px + 0.5vw);
     color: var(--crl-green);
     text-decoration: none;
     font-size: calc(10px + 0.8vw);
+    margin: calc(20px + 0.5vw) auto;
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    #footer-links
+    {
+        display: grid;
+        grid-tempLate-columns: repeat(1, 1fr);
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    #footer-links
+    {
+        display: grid;
+        grid-tempLate-columns: repeat(2, 1fr);
+    }
 }
 
 .footer-link1, .footer-link2, .footer-link3, .footer-link4
