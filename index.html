@@ -107,35 +107,50 @@
                         <span class='read-more-btn'>Saber mais...</span>
                     </div>
                 </div>
-<!-- ...................................................... -->
+
                 <!-- Pedir Contacto Btn Section -->
-                <!-- <button data-modal-target='#modal' id='btn1'>Pedir Contacto</button>
-                <div class='modal' id='modal'>
-                    <div class='modal-header'>
-                        <h3 class='title'>Lorem ipsum dolor sit amet.</h3>
-                        <button data-close-button class='close-button'>&times;</button>
+                <div id='btnmargin'>
+                    <button data-modal-target1='#modal1' id='btn1'>Pedir Contacto</button>
+                    <div class='modal1' id='modal1'>
+                        <div class='modal-header1'>
+                            <h3 class='title1'>Informação de Contacto</h3>
+                            <button data-close-button1 class='close-button1'>&times;</button>
+                        </div>
+                        <div class='modal-body1'>
+                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odit.</p> -->
+                            <form action="https://formsubmit.co/lixadegu@mailgolem.com" method="POST" target="_blank" name="Email_Form">
+                                
+                                <div class='form-flow'>
+                                    <label for="name">Nome</label>
+                                    <input id='name' type="text" required="" name="Name" placeholder="Insira o nome">
+                                </div>
+                    
+                                <div class='form-flow'>
+                                    <label for="emailaddress">Email</label>
+                                    <input id='emailaddress' type="email" required="" name="Email" placeholder="Insira o seu email">
+                                </div>
+
+                                <div class='form-flow'>
+                                    <label for="phonenumber">Telemóvel</label>
+                                    <input id='phonenumber' type="number" required="" name="Phone" placeholder="Insira o seu número">
+                                </div>
+                    
+                                <div id='submit-btn'>
+                                    <button id='submitbtn' type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class='modal-body'>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odit.</p>
-                    </div>
-                </div> -->
-                <!-- <div id='overlay2'></div> -->
-                <!-- ... -->
+                    <div id='overlay2'></div>
 
                 <!-- Simular Poupança Btn Section -->
-                <div id='btnmargin'>
-                    <button id='btn1'>Pedir Contacto</button>
-                    <!-- Multi-Step-Form -->
-                    <!-- Step 1 -->
-                    <!-- div Card 1 -->
-                    <!-- btn2 Popup -->
-                    <button data-modal-target='#modal' id='btn2'>Simular Poupança</button>
-                    <div class='modal' id='modal'>
-                        <div class='modal-header'>
-                            <h3 class='title'>Simule a poupança para a sua empresa</h3>
-                            <button data-close-button class='close-button'>&times;</button>
+                    <button data-modal-target2='#modal2' id='btn2'>Simular Poupança</button>
+                    <div class='modal2' id='modal2'>
+                        <div class='modal-header2'>
+                            <h3 class='title2'>Simule a poupança para a sua empresa</h3>
+                            <button data-close-button2 class='close-button2'>&times;</button>
                         </div>
-                        <div class='modal-body'>
+                        <div class='modal-body2'>
                             <div class='form-group'>
                                 <label for="dropdown1">Valor médio da fatura mensal de eletricidade da empresa (valor sem IVA)</label>
                                 <select id='dropdown1' name="dropdown1">
@@ -169,7 +184,8 @@
                 <img src="Wind Energy.png" alt="Wind Turbine">
             </div>
         </section>
-<!-- ...................................................... -->
+
+        <!-- Video Section -->
         <section id='video'>
             <div id='overlay4'>
                 <p>O Futuro é <mark id='p-crl1'>Verde</mark></p>
@@ -181,8 +197,9 @@
             </div>
         </section>
 
+        <!-- Vantagens Section -->
         <section id='info-wrapper'>
-                <h2 class='h2-title'>Vantagens:</h2>
+                <h2 id='h2-title'>Vantagens:</h2>
             <div id='box'>
                 <div class='info-wrapper'>
                     <i class="fa-solid fa-check"></i>
@@ -208,6 +225,7 @@
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
         <section id='footer'>
             <img id='header-logo2' src="Logo 1.png" alt="Brand Logo">
@@ -220,7 +238,7 @@
             <p id='copyright'>© Copyright 2022 - coopérnico. Todos os direitos reservados</p>
         </section>
     </footer>
-        
+<!-- ........................................................... -->
 
         <!-- <section id='form-wrapper'>
             <form class='multi-step-form' data-multi-step>
@@ -307,6 +325,5 @@
                 </div>
             </form>
         </section> -->
-    
 </body>
 </html>

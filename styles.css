@@ -329,7 +329,6 @@ h2
 }
 
 /* Pedir Contacto Btn Section */
-/* Needs confirmation */
 #btn1
 {
     padding: calc(10px + 0.3vw);
@@ -337,19 +336,137 @@ h2
     font-size: calc(10px + 0.2vw);
     margin-right: calc(10px + 0.5vw);
     background-color: hsl(121, 82%, 47%);
-    border: solid 3px hsl(121, 82%, 47%);
-    border-radius: 20%;
+    border: 3px solid hsl(121, 82%, 47%);
+    border-radius: 25%;
+}
+
+.modal1
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+    background-color: white;
+    width: calc(300px + 60vw);
+    max-width: 40%;
+    height: calc(150px + 20vw);
+    z-index: 5;
+}
+
+.modal1.active
+{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    .modal1
+    {
+        max-width: 70%;
+        height: 350px;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    .modal1
+    {
+        max-width: 50%;
+        height: 380px;
+    }
+}
+
+.modal-header1
+{
+    padding: calc(10px + 0.2vw);
+    margin-top: calc(-25px - 0.5vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.modal-header1 > .title1
+{
+    font-size: calc(12px + 0.8vw);
+    font-weight: bold;
+    margin-left: 30%;
+}
+
+/* Phone */
+@media all and (max-width: 400px) and (min-width: 350px)
+{
+    .modal-header1 > .title1
+    {
+        margin-top: 20px;
+        margin-left: 20%;
+    }
+}
+
+/* Ipad */
+@media all and (max-width: 850px) and (min-width: 400px)
+{
+    .modal-header1 > .title1
+    {
+        margin-top: 20px;
+        margin-left: 25%;
+    }
+}
+
+.modal-header1 > .close-button1
+{
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: calc(10px + 1vw);
+    font-weight: bold;
+}
+
+.modal-body1
+{
+    padding: calc(10px + 0.2vw);
+    text-align: center;
+}
+
+/* .form-flow */
+
+#name, #emailaddress, #phonenumber
+{
+    padding: calc(8px + 0.1vw);
+}
+
+/* #submitbtn */
+
+#overlay2
+{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    pointer-events: none;
+}
+
+#overlay2.active
+{
+    opacity: 0.5;
+    pointer-events: all;
 }
 
 /* Simular Poupança Btn Section */
-/* Needs confirmation */
 #btn2
 {
     padding: calc(10px + 0.3vw);
     font-family: "acumin-pro-medium", Arial;
     font-size: calc(10px + 0.2vw);
-    border: solid 3px hsl(121, 82%, 47%);
-    border-radius: 20%;
+    border: 3px solid hsl(121, 82%, 47%);
+    border-radius: 25%;
 }
 
 #btn1:hover, #btn2:hover
@@ -357,10 +474,9 @@ h2
     scale: 0.9;
 }
 
-.modal
+.modal2
 {
     position: fixed;
-    /* position: relative; needs for to go below */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
@@ -370,15 +486,15 @@ h2
     width: calc(300px + 60vw);
     max-width: 90%;
     height: calc(150px + 20vw);
-    z-index: 10;
+    z-index: 5;
 }
 
-.modal.active
+.modal2.active
 {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.modal-header
+.modal-header2
 {
     padding: calc(10px + 0.2vw);
     margin-top: calc(-25px - 0.5vw);
@@ -387,14 +503,14 @@ h2
     align-items: center;
 }
   
-.modal-header > .title
+.modal-header2 > .title2
 {
     font-size: calc(12px + 0.8vw);
     font-weight: bold;
     margin-left: 35%;
 }
 
-.modal-header > .close-button
+.modal-header2 > .close-button2
 {
     cursor: pointer;
     border: none;
@@ -403,7 +519,7 @@ h2
     font-weight: bold;
 }
 
-.modal-body
+.modal-body2
 {
     padding: calc(10px + 0.2vw);
 }
@@ -498,28 +614,8 @@ select
         display: none;
     }
 }
-/* .................................................................... */
-.h2-title
-{
-    text-align: center;
-    color: var(--crl-green);
-    font-family: "acumin-pro-medium", Arial;
-    font-size: calc(18px + 1vw);
-}
 
-/* Video */
-#background-video > video
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120%;
-    object-fit: cover;
-    z-index: 1;
-    padding-bottom: 20px;
-}
-
+/* Video Section */
 #video
 {
     position: relative;
@@ -568,7 +664,19 @@ select
     background-color: transparent;
 }
 
-/* Info Boxes */
+#background-video > video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    z-index: 1;
+    padding-bottom: 20px;
+}
+
+/* Vantagens Section */
 #info-wrapper
 {
     margin-top: 10%;
@@ -593,6 +701,14 @@ select
     {
         margin-top: 12%;
     }
+}
+
+#h2-title
+{
+    text-align: center;
+    color: var(--crl-green);
+    font-family: "acumin-pro-medium", Arial;
+    font-size: calc(18px + 1vw);
 }
 
 #box
@@ -665,11 +781,13 @@ select
     }
 }
 
+/* Footer Section */
 #footer
 {
     margin-top: 4%;
-    background-color: hsla(0, 0%, 78%, 0.629);
     font-family: "acumin-pro-medium", Arial;
+    background-color: var(--crl-lightgreen);
+    /* background-color: hsla(0, 0%, 78%, 0.629); */
 }
 
 /* Phone */
