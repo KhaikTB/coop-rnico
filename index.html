@@ -142,40 +142,93 @@
                     </div>
                     <div id='overlay2'></div>
 
-                <!-- Simular Poupança Btn Section -->
-                    <button data-modal-target2='#modal2' id='btn2'>Simular Poupança</button>
-                    <div class='modal2' id='modal2'>
-                        <div class='modal-header2'>
-                            <h3 class='title2'>Simule a poupança para a sua empresa</h3>
-                            <button data-close-button2 class='close-button2'>&times;</button>
-                        </div>
-                        <div class='modal-body2'>
-                            <div class='form-group'>
-                                <label for="dropdown1">Valor médio da fatura mensal de eletricidade da empresa (valor sem IVA)</label>
-                                <select id='dropdown1' name="dropdown1">
-                                    <option value="Price">100-199 EUR</option>
-                                    <option value="Price">200-399 EUR</option>
-                                    <option value="Price">400-799 EUR</option>
-                                    <option value="Price">800-1199 EUR</option>
-                                    <option value="Price">1200-1599 EUR</option>
-                                    <option value="Price">1600-1999 EUR</option>
-                                    <option value="Price">Maior ou Igual que 2000 EUR</option>
-                                </select>
+                    <!-- Simular Poupança Btn Section -->
+                    <form data-multi-step>
+                        <div class='card' data-step>
+                            <button data-modal-target2='#modal2' id='btn2'>Simular Poupança</button>
+                            <div class='modal2' id='modal2'>
+                                <div class='modal-header2'>
+                                    <h3 class='title2'>Simule a poupança para a sua empresa</h3>
+                                    <button data-close-button2 class='close-button2'>&times;</button>
+                                </div>
+                                <div class='modal-body2'>
+                                    <div class='form-group'>
+                                        <label for="dropdown1">Valor médio da fatura mensal de eletricidade da empresa (valor sem IVA)</label>
+                                        <select id='dropdown1' name="dropdown1">
+                                            <option value="Price">100-199 EUR</option>
+                                            <option value="Price">200-399 EUR</option>
+                                            <option value="Price">400-799 EUR</option>
+                                            <option value="Price">800-1199 EUR</option>
+                                            <option value="Price">1200-1599 EUR</option>
+                                            <option value="Price">1600-1999 EUR</option>
+                                            <option value="Price">Maior ou Igual que 2000 EUR</option>
+                                        </select>
+                                    </div>
+                                        
+                                    <div class='form-group'>
+                                        <label for="dropdown2">Setor de atividade</label>
+                                        <select id='dropdown2' name="dropdown2">
+                                            <option value="Price">Agricultura</option>
+                                            <option value="Price">Indústria</option>
+                                            <option value="Price">Ação Social</option>
+                                            <option value="Price">Alojamento/Restauração</option>
+                                            <option value="Price">Comércio e Serviços</option>
+                                            <option value="Price">Estado</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" data-next>Seguinte</button> 
+                                </div>
                             </div>
-                                
-                            <div class='form-group'>
-                                <label for="dropdown2">Setor de atividade</label>
-                                <select id='dropdown2' name="dropdown2">
-                                    <option value="Price">Agricultura</option>
-                                    <option value="Price">Indústria</option>
-                                    <option value="Price">Ação Social</option>
-                                    <option value="Price">Alojamento/Restauração</option>
-                                    <option value="Price">Comércio e Serviços</option>
-                                    <option value="Price">Estado</option>
-                                </select>
-                            </div>  
                         </div>
-                    </div>
+
+                        <div class='card' data-step>
+                            <div class='modal2' id='modal2'>
+                                <div class='modal-header2'>
+                                    <h3 class='title2'>Simule a poupança para a sua empresa</h3>
+                                    <button data-close-button2 class='close-button2'>&times;</button>
+                                </div>
+                                <div class='modal-body2'>
+                                    <div class='form-group'>
+                                        <label for="dropdown1">Valor médio da fatura mensal de eletricidade da empresa (valor sem IVA)</label>
+                                        <select id='dropdown1' name="dropdown1">
+                                            <option value="Price">100-199 EUR</option>
+                                            <option value="Price">200-399 EUR</option>
+                                            <option value="Price">400-799 EUR</option>
+                                            <option value="Price">800-1199 EUR</option>
+                                            <option value="Price">1200-1599 EUR</option>
+                                            <option value="Price">1600-1999 EUR</option>
+                                            <option value="Price">Maior ou Igual que 2000 EUR</option>
+                                        </select>
+                                    </div>
+                                    <button type="button">Seguinte</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card' data-step>
+                            <div class='modal2' id='modal2'>
+                                <div class='modal-header2'>
+                                    <h3 class='title2'>Simule a poupança para a sua empresa</h3>
+                                    <button data-close-button2 class='close-button2'>&times;</button>
+                                </div>
+                                <div class='modal-body2'>
+                                    <div class='form-group'>
+                                        <label for="dropdown1">Valor médio da fatura mensal de eletricidade da empresa (valor sem IVA)</label>
+                                        <select id='dropdown1' name="dropdown1">
+                                            <option value="Price">100-199 EUR</option>
+                                            <option value="Price">200-399 EUR</option>
+                                            <option value="Price">400-799 EUR</option>
+                                            <option value="Price">800-1199 EUR</option>
+                                            <option value="Price">1200-1599 EUR</option>
+                                            <option value="Price">1600-1999 EUR</option>
+                                            <option value="Price">Maior ou Igual que 2000 EUR</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                     <div id='overlay3'></div>
                 </div>
             </div>
@@ -237,92 +290,5 @@
             <p id='copyright'>© Copyright 2022 - coopérnico. Todos os direitos reservados</p>
         </section>
     </footer>
-<!-- ........................................................... -->
-
-        <!-- <section id='form-wrapper'>
-            <form class='multi-step-form' data-multi-step>
-                Step 1
-                <div class='card' data-step>
-                    <h3 class='step-title'>This is step 1</h3>
-                    <div class='form-group'>
-                        <label for="email">Email</label>
-                        <input id='email' type="email" name="email">
-                    </div>
-                    <div class='form-group'>
-                        <label for="password">Password</label>
-                        <input id='password' type="password" name="password">
-                    </div>
-                    <button type="button" data-next>Next</button>
-                </div>
-
-                Step 2
-                <div class='card' data-step>
-                    <h3 class='step-title'>This is step 2</h3>
-                    <div class='form-group'>
-                        <label for="address">Address</label>
-                        <input id='address' type="text" name="address">
-                    </div>
-                    <div class='form-group'>
-                        <label for="city">City</label>
-                        <input id='city' type="text" name="city">
-                    </div>
-                    <div class='form-group'>
-                        <label for="zipcode">Zip Code</label>
-                        <input id='zipcode' type="text" name="zipcode">
-                    </div>
-                    <button type="button" data-previous>Previous</button>
-                    <button type="button" data-next>Next</button>
-                </div>
-
-                Step 3
-                <div class='card' data-step>
-                    <h3 class='step-title'>This is step 3</h3>
-                    <div class='form-group'>
-                        <label for="firstName">First Name</label>
-                        <input id='firstName' type="text" name="firstName">
-                    </div>
-                    <div class='form-group'>
-                        <label for="lastName">Last Name</label>
-                        <input id='lastName' type="text" name="lastName">
-                    </div>
-                <button type="button" data-previous>Previous</button>
-                <button type="submit">Submit</button>
-                </div>
-            </form>
-
-            <form class='form' data-multi-step>
-                 Steps 
-                <ul class='form__steps'>
-                    <li class='form__step form__step--active' data-step>Consumo</li>
-                    <li class='form__step' data-step>Resultado</li>
-                </ul>
-            
-                 Consumo 
-                <fieldset class='form__card form__card--active' data-form-card>
-                    <input class='form__input' type="text" name="username" placeholder="Username" minLength="6" required/>
-                    <input class='form__input' type="email" name="email" placeholder="Email" required/>
-                    <input class='form__input' type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required name="password" placeholder="Password"/>
-                    <input class='form__button form__button--next' type="button" value="Next" name="next" data-next/>
-                </fieldset>
-
-                 Resultado 
-                <fieldset class='form__card' data-form-card>
-                    <input class='form__input' type="text" name="first_name" placeholder="First Name" required />
-                    <input class='form__input' type="text" name="last_name" placeholder="Last Name" required />
-                    <input class='form__input' type="tel" name="phone" placeholder="Phone" required />
-                    <input class='form__button form__button--prev' type="button" value="Previous" name="previous" data-prev />
-                    <input class='form__button form__button--next' type="button" value="Next" name="next" data-next />
-                </fieldset>
-
-                Success
-                <div class='form__card' data-form-sent>
-                    <h3 class='form__card-title'>Account created!</h3>
-                    <svg class='checkmark' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                        <circle class='checkmark__circle' cx="26" cy="26" r="25" fill="none" />
-                        <path class='checkmark__check' fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                    </svg>
-                </div>
-            </form>
-        </section> -->
 </body>
 </html>

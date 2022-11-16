@@ -108,47 +108,28 @@ function closeModal2(modal2)
   overlay3.classList.remove('active')
 }
 
+// Multi-Step
+const multiStepForm = document.querySelector("[data-multi-step")
+const formSteps = [...multiStepForm.querySelectorAll("[data-step]")]
 
+let currentStep = formSteps.findIndex(step => {
+  return step.classList.contains("active")
+})
 
+if (currentStep < 0)
+{
+  currentStep = 0
+  formSteps[currentStep].classList.add("active")
+}
 
-
-
-
-// const openSimularBtn = document.querySelectorAll('[data-modal-target]')
-// const closeSimularBtn = document.querySelectorAll('[data-close-button]')
-// const overlay3 = document.getElementById('overlay3')
-
-// openSimularBtn.forEach(button => {
-//   button.addEventListener('click', () => {
-//     const modal2 = document.querySelector(button.dataset.modalTarget)
-//     openModal2(modal2)
-//   })
-// })
-
-// closeSimularBtn.forEach(button => {
-//   button.addEventListener('click', () => {
-//     const modal2 = button.closest('.modal2')
-//     closeModal2(modal2)
-//   })
-// })
-
-// overlay3.addEventListener('click', () => {
-//   const modals2 = document.querySelectorAll('.modal2.active')
-//   modals2.forEach(modal => {
-//     closeModal2(modal2)
-//   })
-// })
-
-// function openModal2(modal2)
-// {
-//   if (modal2 == null) return
-//   modal2.classList.add('active')
-//   overlay3.classList.add('active')
-// }
-
-// function closeModal2(modal2)
-// {
-//   if (modal2 == null) return
-//   modal2.classList.remove('active')
-//   overlay3.classList.remove('active')
-// }
+multiStepForm.addEventListener("click", e => {
+  if (e.target.matches("[data-next"))
+  {
+    currentStep += 1
+  }
+  else if
+    (e.target.matches("[data-previous]")) {
+      currentStep -= 1
+    }
+  console.log(currentStep)
+})

@@ -511,7 +511,7 @@ h2
     transform: translate(-50%, -50%) scale(0);
     transition: 0.5s ease-in-out;
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--crl-green);
     width: calc(300px + 60vw);
     max-width: 90%;
     height: calc(150px + 20vw);
@@ -537,6 +537,7 @@ h2
     font-size: calc(12px + 0.8vw);
     font-weight: bold;
     margin-left: 35%;
+    color: white;
 }
 
 .modal-header2 > .close-button2
@@ -551,6 +552,7 @@ h2
 .modal-body2
 {
     padding: calc(10px + 0.2vw);
+    color: var(--crl-lightgreen);
 }
 
 .form-group
@@ -643,6 +645,23 @@ select
         display: none;
     }
 }
+
+/* ................................................. */
+.card
+{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: none;
+}
+
+.card.active
+{
+    display: block;
+}
+/* ................................................. */
 
 /* Video Section */
 #video
