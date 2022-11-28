@@ -549,15 +549,13 @@ h2
     font-weight: bold;
 }
 
-.modal-body2
-{
-    padding: calc(10px + 0.2vw);
-    color: var(--crl-lightgreen);
-}
+/* .modal-body2 */
 
 .form-group
 {
     text-align: center;
+    color: var(--crl-lightgreen);
+    padding: calc(10px + 0.2vw);
 }
 
 label
@@ -649,18 +647,29 @@ select
 /* ................................................. */
 .card
 {
-    background-color: white;
     border: 1px solid black;
-    border-radius: 5%;
-    max-width: 300px;
+    /* border-radius: 5%; */
+    max-width: 1000px;
     margin: 0 auto;
-    display: none;
+    /* idk about animation */
+    padding: calc(10px + 0.5vw);
+    text-align: center;
 }
 
-.card.active
+/* .card.active
 {
     display: block;
-}
+} */
+/* ................................................. */
+
+  /* .multi-step-form {
+    overflow: hidden;
+    position: relative;
+  } 
+  
+  .hide {
+    display: none;
+  } */
 /* ................................................. */
 
 /* Video Section */
