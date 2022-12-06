@@ -651,25 +651,25 @@ select
     /* border-radius: 5%; */
     max-width: 1000px;
     margin: 0 auto;
-    /* idk about animation */
     padding: calc(10px + 0.5vw);
     text-align: center;
 }
 
-/* .card.active
+.card.active
 {
     display: block;
-} */
-/* ................................................. */
+}
 
-  /* .multi-step-form {
+.multi-step-form
+{
     overflow: hidden;
     position: relative;
-  } 
+} 
   
-  .hide {
+.hide
+{
     display: none;
-  } */
+}
 /* ................................................. */
 
 /* Video Section */
